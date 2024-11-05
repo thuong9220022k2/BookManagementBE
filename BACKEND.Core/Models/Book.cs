@@ -21,7 +21,7 @@ namespace BACKEND.Core.Models
         public Category Category { get; set; }
         public string Language { get; set; }
         public int Pages { get; set; }
-        public Datetime PublishedAt { get; set; }
+        public DateTime PublishedAt { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
 

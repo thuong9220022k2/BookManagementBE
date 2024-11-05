@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namsespace BACKEND.Core.Models
+namespace BACKEND.Core.Models
 {
     public class BaseEntity
-{
-    #region Properties
-    public Datetime CreatedAt { get; set; }
-    public Datetime UpdatedAt { get; set; }
-    #endregion
-}
+    {
+        #region Properties
+        public Guid Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+
+        #endregion
+    }
 }

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Sytem.Text;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BACKEND.Core.Enums
