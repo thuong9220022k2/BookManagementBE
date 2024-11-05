@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
-using MysqlConnector;
-using BACKEND.Core
+using MySqlConnector;
+using BACKEND.Core.Enums;
 
 namespace BACKEND.Infra.Repos
 {
