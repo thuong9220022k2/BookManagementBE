@@ -16,5 +16,6 @@ namespace BACKEND.Core.Constants
         public const string ValidateMaxLengthErrorCode = "ERROR_005";
         public const string QueryStringError = "ERROR_006";
         public const string RouteError = "ERROR_007";
+        public const string EntityNotFound = "ERROR_008";
     }
 }

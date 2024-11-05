@@ -22,9 +22,9 @@ namespace BACKEND.Infra.Repos
         #endregion
 
         #region Constructor
-        public BaseRepository(IConfiguration configuration)
+        public BaseRepository()
         {
-            _connection_string = "Server=b738iwjjktqxwu1dlp1p-mysql.services.clever-cloud.com;User ID=uckw5o6komfx5m4u;Password=54k62OBhiR1XVCJGZFZl;Database=b738iwjjktqxwu1dlp1p"; ;
+            _connection_string = "Server=b738iwjjktqxwu1dlp1p-mysql.services.clever-cloud.com;User ID=uckw5o6komfx5m4u;Password=54k62OBhiR1XVCJGZFZl;Database=b738iwjjktqxwu1dlp1p";
             TableName = typeof(Entity).Name;
         }
 
@@ -47,11 +47,12 @@ namespace BACKEND.Infra.Repos
             {
                 var sql = $"SELECT * FROM {TableName} WHERE {TableName}Id = @{entityId}Id";
                 var parameters = new DynamicParameters();
-                parameters.Add($"@{entity}Id", entityId);
+                parameters.Add($"@{entityId}Id", entityId);
                 var entity = await connection.QueryFirstOrDefaultAsync<Entity>(sql);
                 return entity;
             }
         }
+        #endregion
 
         // public async Task<int> UpdateEntity(Entity entity)
         // {

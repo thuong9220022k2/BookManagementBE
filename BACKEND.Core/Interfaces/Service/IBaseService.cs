@@ -10,7 +10,7 @@ namespace BACKEND.Core.Interfaces.Service
     {
         Task<ServiceResult> GetAllEntity();
         Task<ServiceResult> GetEntityById(Guid entityId);
-        Task<ServiceResult> UpdateEntity(Entity entity);
-        Task<ServiceResult> DeleteEntity(Guid entityId);
+        // Task<ServiceResult> UpdateEntity(Entity entity);
+        // Task<ServiceResult> DeleteEntity(Guid entityId);
     }
 }
