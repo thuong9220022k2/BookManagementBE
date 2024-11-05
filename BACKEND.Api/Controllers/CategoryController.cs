@@ -15,14 +15,10 @@ namespace BACKEND.Api.Controllers
 {
     public class CategoryController : BaseEntityController<Category>
     {
-        #region Fields
-        ICategoryService _categoryService;
-        #endregion
 
         #region Constructor
-        public CategoryController(ICategoryService categoryService) : base(categoryService)
+        public CategoryController(IBaseService<Category> baseService) : base(baseService)
         {
-            _categoryService = categoryService;
         }
         #endregion
     }

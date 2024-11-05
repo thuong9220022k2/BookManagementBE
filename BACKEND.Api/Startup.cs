@@ -40,8 +40,8 @@ namespace BACKEND.Api
             {
                 jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
             });
-            services.AddScoped<CategoryRepository, CategoryRepository>();
-            services.AddScoped<ICategoryService, CategoryService>();
+            // services.AddScoped<ICategoryRepository, CategoryRepository>();
+            // services.AddScoped<ICategoryService, CategoryService>();
 
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));

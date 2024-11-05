@@ -32,6 +32,8 @@ namespace BACKEND.Core.Services
         public async Task<ServiceResult> GetAllEntity()
         {
             var entities = await _baseRepository.GetAllEntity();
+            //print entities
+            Console.WriteLine($"entities core {entities}");
             if (entities != null)
             {
                 ServiceResult.Data = entities;

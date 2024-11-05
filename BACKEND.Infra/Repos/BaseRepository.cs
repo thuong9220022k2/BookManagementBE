@@ -35,8 +35,11 @@ namespace BACKEND.Infra.Repos
         {
             using (connection = new MySqlConnection(_connection_string))
             {
+                Console.WriteLine($"TableName {TableName}");
+                Console.WriteLine($"_connection_string {_connection_string}");
                 var sql = $"SELECT * FROM {TableName}";
                 var entities = await connection.QueryAsync<Entity>(sql);
+                Console.WriteLine($"entities  infra {entities}");
                 return entities;
             }
         }
