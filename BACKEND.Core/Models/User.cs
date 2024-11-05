@@ -38,7 +38,7 @@ namespace BACKEND.Core.Models
         }
         public string Phone { get; set; }
         public DateTime DateJoined { get; set; }
-        public Role? Role { get; set; }
+        public Role Role { get; set; }
         public string RoleName
         {
             get
