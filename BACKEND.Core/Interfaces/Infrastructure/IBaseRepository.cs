@@ -14,7 +14,5 @@ namespace BACKEND.Core.Interfaces.Infrastructure
         Task<bool> DeleteEntity(Guid entityId);
         Task<bool> CheckDuplicate(string propName, object value);
         Task<bool> CheckDuplicateBeforeUpdate(Guid entityId, Entity entity);
-
-
     }
 }

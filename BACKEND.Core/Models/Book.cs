@@ -13,12 +13,12 @@ namespace BACKEND.Core.Models
         public string BookCode { get; set; }
         public string Title { get; set; }
         public Guid AuthorId { get; set; } //FK
-        public List<Author>? Author { get; set; }
+        public Author? Author { get; set; }
         public Guid PublisherId { get; set; } //FK
-        public Publisher Publisher { get; set; }
+        public Publisher? Publisher { get; set; }
         public string ISBN { get; set; }
         public Guid CategoryId { get; set; } //FK
-        public List<Category>? Category { get; set; }
+        public Category? Category { get; set; }
         public string Language { get; set; }
         public int Pages { get; set; }
         public DateTime PublishedAt { get; set; }
