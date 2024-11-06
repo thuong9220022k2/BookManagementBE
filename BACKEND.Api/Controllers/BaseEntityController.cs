@@ -59,6 +59,75 @@ namespace BACKEND.Api.Controllers
             }
 
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddEntity(Entity entity)
+        {
+            try
+            {
+                var result = await _baseService.AddEntity(entity);
+                if (result.IsSuccess)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(result);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ServiceResult(ex)); ;
+            }
+
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateEntity(Entity entity)
+        {
+            try
+            {
+                var result = await _baseService.UpdateEntity(entity);
+                if (result.IsSuccess)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(result);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ServiceResult(ex)); ;
+            }
+
+        }
+
+        [HttpDelete("{entityId}")]
+        public async Task<IActionResult> DeleteEntity(Guid entityId)
+        {
+            try
+            {
+                var result = await _baseService.DeleteEntity(entityId);
+                if (result.IsSuccess)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(result);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ServiceResult(ex)); ;
+            }
+
+        }
         #endregion
 
     }

@@ -13,11 +13,11 @@ using BACKEND.Core.Interfaces.Service;
 
 namespace BACKEND.Api.Controllers
 {
-    public class UserController : BaseEntityController<User>
+    public class PublisherController : BaseEntityController<Publisher>
     {
 
         #region Constructor
-        public UserController(IBaseService<User> baseService) : base(baseService)
+        public PublisherController(IBaseService<Publisher> baseService) : base(baseService)
         {
         }
         #endregion

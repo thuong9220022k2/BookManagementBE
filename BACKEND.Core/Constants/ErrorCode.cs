@@ -17,5 +17,8 @@ namespace BACKEND.Core.Constants
         public const string QueryStringError = "ERROR_006";
         public const string RouteError = "ERROR_007";
         public const string EntityNotFound = "ERROR_008";
+        public const string AddEntityError = "ADD ENTITY ERROR";
+        public const string UpdateEntityError = "UPPDATE ENTITY ERROR";
+        public const string DeleteEntityError = "DELETE ENTITY ERROR";
     }
 }

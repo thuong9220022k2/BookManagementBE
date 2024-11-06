@@ -65,5 +65,52 @@ namespace BACKEND.Core.Services
             return ServiceResult;
         }
 
+        public async Task<ServiceResult> AddEntity(Entity entity)
+        {
+            var result = await _baseRepository.AddEntity(entity);
+            if (result)
+            {
+                ServiceResult.IsSuccess = true;
+            }
+            else
+            {
+                ServiceResult.IsSuccess = false;
+                ServiceResult.Message = Constants.ErrorCode.AddEntityError;
+            }
+            return ServiceResult;
+        }
+
+        public async Task<ServiceResult> UpdateEntity(Entity entity)
+        {
+            var result = await _baseRepository.UpdateEntity(entity);
+            if (result)
+            {
+                ServiceResult.IsSuccess = true;
+            }
+            else
+            {
+                ServiceResult.IsSuccess = false;
+                ServiceResult.Message = Constants.ErrorCode.UpdateEntityError;
+            }
+            return ServiceResult;
+        }
+
+        public async Task<ServiceResult> DeleteEntity(Guid entityId)
+        {
+            var result = await _baseRepository.DeleteEntity(entityId);
+            if (result)
+            {
+                ServiceResult.IsSuccess = true;
+            }
+            else
+            {
+                ServiceResult.IsSuccess = false;
+                ServiceResult.Message = Constants.ErrorCode.DeleteEntityError;
+            }
+            return ServiceResult;
+
+
+
+        }
     }
 }

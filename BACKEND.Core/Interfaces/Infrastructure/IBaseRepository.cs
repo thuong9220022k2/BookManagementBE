@@ -9,10 +9,11 @@ namespace BACKEND.Core.Interfaces.Infrastructure
     {
         Task<IEnumerable<Entity>> GetAllEntity();
         Task<Entity> GetEntityById(Guid entityId);
-        // Task<int> UpdateEntity(Entity entity);
-        // Task<int> DeleteEntity(Guid entityId);
-        // bool CheckDuplicate(string propName, object value);
-        // bool checkDuplicateBeforeUpdate(Guid id, string propName, Entity entity);
+        Task<bool> AddEntity(Entity entity);
+        Task<bool> UpdateEntity(Entity entity);
+        Task<bool> DeleteEntity(Guid entityId);
+        Task<bool> CheckDuplicate(string propName, object value);
+        Task<bool> CheckDuplicateBeforeUpdate(Guid entityId, Entity entity);
 
 
     }
