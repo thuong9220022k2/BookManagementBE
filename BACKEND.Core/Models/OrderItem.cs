@@ -11,7 +11,6 @@ namespace BACKEND.Core.Models
 
         public Guid OrderItemId { get; set; } //PK
         public Guid OrderId { get; set; } //FK
-        public Order Order { get; set; }
         public Guid BookId { get; set; } //FK
         public Book Book { get; set; }
         public int Quantity { get; set; }
